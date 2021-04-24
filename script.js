@@ -1,9 +1,9 @@
 // Gathering HTML elements for manipulation
 var quizBody = document.getElementById("quiz");
-var resultsEL= document.getElementById("result");
-var finalScoreEL = document.getElementById("finalScore");
-var finsihDiv = document.getElementById("finish");
-var questionsEL = document.getElementById("questions");
+var resultsEl= document.getElementById("result");
+var finalScoreEl = document.getElementById("finalScore");
+var finishDiv = document.getElementById("finish");
+var questionsEl = document.getElementById("questions");
 var quizTimer = document.getElementById("timer");
 var startQuizButton = document.getElementById("startbtn");
 var introQuizDiv = document.getElementById("intro");
@@ -96,7 +96,7 @@ function generateQuizQuestion(){
 
 // Start Quiz function starts the TimeRanges, hides the start button, and displays the first quiz question.
 function startQuiz(){
-    gameoverDiv.style.display = "none";
+    finishDiv.style.display = "none";
     introQuizDiv.style.display = "none";
     generateQuizQuestion();
 
@@ -168,10 +168,10 @@ function generateHighscores(){
 // This function displays the high scores page while hiding all of the other pages from 
 function showHighscore(){
     introQuizDiv.style.display = "none"
-    gameoverDiv.style.display = "none";
+    // finishDiv.style.display = "none";
     highscoreContainer.style.display = "flex";
     highscoreDiv.style.display = "block";
-    endGameBtns.style.display = "flex";
+    finishQuizBtns.style.display = "flex";
 
     generateHighscores();
 }
